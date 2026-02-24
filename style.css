@@ -1,0 +1,173 @@
+/* Reset all default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+/* Full screen body with flex centering */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #275a58; /* dark background */
+}
+
+/* Main container for the game */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* spacing between elements */
+}
+
+/* Title styling */
+.title {
+    color: #7eaba6;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Combined player turn and winner display */
+.status {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.playerX {
+    color: #f4c2cd;
+}
+
+.playerO {
+    color: #eb98c0;
+}
+
+/* Hide elements */
+.hide {
+    display: none;
+}
+
+/* Game board container */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    position: relative; /* for winning line */
+}
+
+/* Individual tiles */
+.tile {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #7eaba6;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.start-screen h1 {
+    font-size: 50px;
+    color: #f4c2cd;
+}
+
+.start-screen button {
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7eaba6;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Winning line overlay */
+.line {
+    position: absolute;
+    width: 300px;        /* same as board width */
+    height: 5px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* Controls container */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Reset button styling */
+.controls button {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.game-container h1 {
+    font-size: 50px;
+    color: #f4c2cd;
+}
+
+.game-container button {
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7eaba6;
+    color: white;
+    cursor: pointer;
+}
+
+.token-container {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.token-box {
+    background:  white;
+    border: 3px solid #f4c2cd;
+    color: #7eaba6;
+    padding: 3px 20px;
+    font-weight: bold;
+    text-align: right;
+    border-radius: 5px;
+}
+
+
+#reset {
+    background-color: #7eaba6;
+}
+#AI {
+    background-color: #7eaba6;
+}
+
+.restart {
+    background-color: #498AFB;
+}
